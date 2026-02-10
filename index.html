@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clases de Regularización - Matemáticas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background-color: #f9fbfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(120deg, #4a90e2, #6eb5ff);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #4a90e2;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Materias */
+    .materias-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .materia {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .materia:hover {
+      transform: translateY(-5px);
+    }
+
+    .materia img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 0.8rem;
+    }
+
+    /* Acerca de */
+    .acerca {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+    }
+
+    .acerca img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #4a90e2;
+    }
+
+    /* Contacto */
+    .contacto {
+      text-align: center;
+    }
+
+    .contacto a {
+      display: inline-block;
+      margin: 0.5rem 1rem;
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contacto a:hover {
+      color: #1a5fb4;
+    }
+
+    /* Comentarios */
+    .comentarios {
+      margin-top: 3rem;
+    }
+
+    .comentarios form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    button {
+      background: #4a90e2;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #367ed9;
+    }
+
+    .comentario {
+      background: white;
+      border-left: 4px solid #4a90e2;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+
+    footer {
+      background: #f1f7fd;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .acerca img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Clases de Regularización en Matemáticas</h1>
+    <p>¿Buscas clases de regularización que se adapten a tu ritmo y a tu forma de aprender? 📚<br>
+    Te acompaño paso a paso para que comprendas, practiques y ganes seguridad en tus conocimientos.</p>
+  </header>
+
+  <section id="materias">
+    <h2>Materias y Cuadernillos</h2>
+    <div class="materias-grid">
+      <div class="materia">
+        <img src="https://img.icons8.com/color/96/000000/plus-minus.png" alt="Operaciones">
+        <p>Jerarquía de operaciones</p>
+      </div>
+      <div class="materia">
+        <img src="https://img.icons8.com/color/96/000000/division.png" alt="Razones y proporciones">
+        <p>Razones y proporciones</p>
+      </div>
+      <div class="materia">
+        <img src="https://img.icons8.com/color/96/000000/math.png" alt="Álgebra">
+        <p>Álgebra</p>
+      </div>
+      <div class="materia">
+        <img src="https://img.icons8.com/color/96/000000/geometry.png" alt="Geometría">
+        <p>Geometría</p>
+      </div>
+      <div class="materia">
+        <img src="https://img.icons8.com/color/96/000000/statistics.png" alt="Estadística">
+        <p>Estadística</p>
+      </div>
+      <div class="materia">
+        <img src="https://img.icons8.com/color/96/000000/dice.png" alt="Probabilidad">
+        <p>Probabilidad</p>
+      </div>
+      <div class="materia">
+        <img src="https://img.icons8.com/color/96/000000/brain.png" alt="Pensamiento lógico">
+        <p>Pensamiento lógico y resolución de problemas</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="acerca">
+    <h2>Acerca de la Maestra</h2>
+    <div class="acerca">
+      <img src="https://img.icons8.com/fluency/240/teacher.png" alt="Maestra">
+      <h3>[Nombre de la maestra]</h3>
+      <p>Mi filosofía de enseñanza se basa en la comprensión, el acompañamiento y el desarrollo del pensamiento lógico. 
+      Creo que cada estudiante aprende de manera distinta, y mi objetivo es brindar estrategias personalizadas que fortalezcan su confianza y habilidades matemáticas.</p>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="contacto">
+      <p>¡Contáctame para más información o para agendar tu clase!</p>
+      <a href="https://wa.me/52XXXXXXXXXX" target="_blank">📱 WhatsApp</a>
+      <a href="mailto:correo@gmail.com">✉️ correo@gmail.com</a>
+    </div>
+
+    <div class="comentarios">
+      <h2>Opiniones y Experiencias</h2>
+      <form id="comentarioForm">
+        <textarea id="comentarioInput" placeholder="Escribe tu comentario..." required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="comentariosLista"></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Clases de Regularización en Matemáticas | Todos los derechos reservados
+  </footer>
+
+  <script>
+    const formulario = document.getElementById("comentarioForm");
+    const input = document.getElementById("comentarioInput");
+    const lista = document.getElementById("comentariosLista");
+
+    const palabrasProhibidas = ["grosería1","grosería2","tonto","idiota","estúpido","imbécil"];
+
+    formulario.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const texto = input.value.trim();
+
+      if (!texto) return;
+
+      const contieneGroseria = palabrasProhibidas.some(p => texto.toLowerCase().includes(p));
+      if (contieneGroseria) {
+        alert("Tu comentario contiene palabras inapropiadas y no será publicado.");
+        input.value = "";
+        return;
+      }
+
+      const div = document.createElement("div");
+      div.classList.add("comentario");
+      div.textContent = texto;
+      lista.prepend(div);
+
+      input.value = "";
+    });
+  </script>
+</body>
+</html>
